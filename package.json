@@ -1,0 +1,49 @@
+{
+  "name": "@blockquote/coverage-table-reporter",
+  "version": "1.0.0",
+  "description": "Adding a simple coverage table to your web-test-runner reporters",
+  "keywords": [
+    "reporter",
+    "test",
+    "lcov",
+    "testrunner",
+    "mocha",
+    "coverage"
+  ],
+  "homepage": "https://github.com/oscarmarina/coverage-table-reporter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oscarmarina/coverage-table-reporter"
+  },
+  "license": "MIT",
+  "author": "oscar marina",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/coverage-table-reporter.module.js",
+      "require": "./dist/umd/coverage-table-reporter.umd.cjs"
+    }
+  },
+  "main": "./dist/umd/coverage-table-reporter.umd.cjs",
+  "module": "./dist/coverage-table-reporter.module.js",
+  "source": "./src/coverageTableReporter.js",
+  "files": [
+    "dist",
+    "src/coverageTableReporter.js"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "postbuild": "echo {\\\"type\\\": \\\"commonjs\\\"} > dist/umd/package.json"
+  },
+  "devDependencies": {
+    "vite": "^3.0.0",
+    "vite-plugin-externalize-deps": "^0.4.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
