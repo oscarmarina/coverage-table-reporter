@@ -8,11 +8,11 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/coverageTableReporter.js'),
       name: 'coverageTableReporter',
-      formats: ['module', 'umd'],
+      formats: ['es', 'umd'],
       fileName: (format) =>
         format === 'umd'
           ? `${format}/coverage-table-reporter.${format}.cjs`
-          : `coverage-table-reporter.${format}.js`,
+          : `coverage-table-reporter.module.js`,
     },
   },
   plugins: [externalizeDeps()],
