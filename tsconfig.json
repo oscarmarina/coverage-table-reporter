@@ -1,0 +1,12 @@
+{
+  "include": [
+      "src/**/*.js"
+  ],
+  "compilerOptions": {
+      // https://humanwhocodes.com/snippets/2020/10/create-typescript-declarations-from-javascript-jsdoc/
+      "declaration": true,
+      "emitDeclarationOnly": true,
+      "allowJs": true,
+      "outDir": "dist"
+  }
+}

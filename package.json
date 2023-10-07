@@ -1,6 +1,6 @@
 {
   "name": "@blockquote/coverage-table-reporter",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Adding a simple coverage table to your web-test-runner reporters",
   "keywords": [
     "reporter",
@@ -28,15 +28,17 @@
   "main": "./dist/coverage-table-reporter.module.js",
   "module": "./dist/coverage-table-reporter.module.js",
   "source": "./src/coverageTableReporter.js",
+  "types": "./dist/coverageTableReporter.d.ts",
   "files": [
     "dist",
     "src/coverageTableReporter.js"
   ],
   "scripts": {
-    "build": "vite build",
+    "build": "vite build && tsc",
     "postbuild": "echo {\\\"type\\\": \\\"commonjs\\\"} > dist/umd/package.json"
   },
   "devDependencies": {
+    "typescript": "^5.2.2",
     "vite": "^4.4.11",
     "vite-plugin-externalize-deps": "^0.7.0"
   },
